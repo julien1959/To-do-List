@@ -10,11 +10,11 @@ function createNewLi() {
 }
 
 function insertUserInputInLi() {
-
+    li.textContent = userInput.nodeValue;
 }
 
 function addNewLiInDom() {
-
+    ul.insertAdjacentElement("beforeend", "li");
 }
 
 function addLiToDoList() {
