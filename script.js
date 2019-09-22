@@ -1,8 +1,8 @@
 'use strict';
 
-const userInput = document.querySelector(".inputUser");
-const button = document.querySelector(".enter");
-const ul = document.querySelector("ul");
+const input = document.body.querySelector(".userInput");
+const button = document.body.querySelector(".enter");
+const ul = document.body.querySelector("ul");
 let li;
 
 function createNewLi() {
@@ -10,21 +10,31 @@ function createNewLi() {
 }
 
 function insertUserInputInLi() {
-    li.textContent = userInput.nodeValue;
+    li.textContent = input.value;
 }
 
 function addNewLiInDom() {
-    ul.insertAdjacentElement("beforeend", "li");
+    ul.insertAdjacentElement("beforeend", li);
+}
+
+function getUserInputEnter(key) {
+    if (key.keyCode == 13) {
+        addLiToDoList();
+    }
+}
+
+function emptyField() {
+    input.value = "";
 }
 
 function addLiToDoList() {
-
+    if (input.value.length > 0) {
+        createNewLi();
+        insertUserInputInLi();
+        addNewLiInDom();
+        emptyField();
+    }
 }
 
-function getUserInputClick() {
-
-}
-
-function getUserInputEnter() {
-
-}
+input.addEventListener( "keypress" , getUserInputEnter);
+button.addEventListener( "click" , addLiToDoList);
