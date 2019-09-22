@@ -1,38 +1,30 @@
-const userInput = document.body.querySelector("userinput");
-const enter = document.body.querySelector("enter");
-const ul = document.body.querySelector("ul");
-let = li;
+'use strict';
 
-function getInputValueClick() {
-
-}
-
-function getInputValueEnter() {
-
-}
+const userInput = document.querySelector(".inputUser");
+const button = document.querySelector(".enter");
+const ul = document.querySelector("ul");
+let li;
 
 function createNewLi() {
-   li =  document.body.ul.createElement("li")
+    li = document.createElement('li');
 }
 
-function insertInputInLi() {
-
-}
-
-function insertNewLiInDom() {
+function insertUserInputInLi() {
 
 }
 
-function addNewLiInToDoList() {
-    createNewLi();
-    insertInputInLi();
-    insertNewLiInDom();
+function addNewLiInDom() {
+
 }
 
+function addLiToDoList() {
 
-function() {
-    alert;
 }
 
+function getUserInputClick() {
 
-// element.addEventListener("quoi?"(click-keypress..) , Action(fonction));
+}
+
+function getUserInputEnter() {
+
+}
